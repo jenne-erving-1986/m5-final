@@ -1,6 +1,6 @@
 document.getElementById('searchBtn').addEventListener('click', function() {
     const query = document.getElementById('searchInput').value;
-    const apiKey = 'dfd5bcb6'; 
+    const apiKey = 'dfd5bcb6'; // Replace with your actual API key
     const url = `http://www.omdbapi.com/?s=${query}&apikey=${apiKey}`;
 
     fetch(url)
@@ -27,3 +27,5 @@ function displayResults(movies) {
         resultsContainer.appendChild(movieElement);
     });
 }
+
+

@@ -10,8 +10,10 @@
 <body>
     <header>
         <h1>Movie Search</h1>
-        <input type="text" id="searchInput" placeholder="Search for a movie...">
-        <button id="searchBtn">Search</button>
+        <div class="center-container">
+            <input type="text" id="searchInput" placeholder="Search for a movie...">
+            <button id="searchBtn">Search</button>
+        </div>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -19,9 +21,14 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
+        
     </header>
     <main id="results">
-        !-- will hold the results of the search --! 
+        <div id="loading" style="display:none;">
+            Loading...
+        </div>
+        <div id="results"></div>
+        
     </main>
     <footer>
         <p>&copy; 2026 Movie Search</p>

@@ -6,3 +6,21 @@ h1 {
     align-items: center;
     justify-content: center;  
 }
+
+body {
+    background-image: url('https://m.media-amazon.com/images/M/MV5BZWVhYzdiMTQtMzJkMC00YWEwLTkyNDEtNzkwMGQ3NTBhMzExXkEyXkFqcGc@._V1_SX300.jpg'); /* Replace with your image URL */
+    background-size: cover; /* This makes sure the image covers the entire background */
+    background-position: center; /* This centers the image */
+    background-repeat: no-repeat; /* This prevents the image from repeating */
+}
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#searchBtn {
+    color: purple;
+    border-radius: 50px;
+}
