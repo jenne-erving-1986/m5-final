@@ -7,11 +7,22 @@ h1 {
     justify-content: center;  
 }
 
+h2 {
+    color: purple;
+    font-size: 36px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
 body {
-    background-image: url('https://m.media-amazon.com/images/M/MV5BZWVhYzdiMTQtMzJkMC00YWEwLTkyNDEtNzkwMGQ3NTBhMzExXkEyXkFqcGc@._V1_SX300.jpg'); /* Replace with your image URL */
-    background-size: cover; /* This makes sure the image covers the entire background */
+    background-image: url('https://as2.ftcdn.net/v2/jpg/06/23/24/03/1000_F_623240349_aCmGPKwic0PIumohlr0jgYPzAozuJdE3.jpg'); /* Replace with your image URL */
+    background-size: 1500px 1500px; /* This makes sure the image covers the entire background */
     background-position: center; /* This centers the image */
     background-repeat: no-repeat; /* This prevents the image from repeating */
+    
+    
 }
 
 .center-container {
@@ -24,3 +35,13 @@ body {
     color: purple;
     border-radius: 50px;
 }
+
+.nav-links {
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
