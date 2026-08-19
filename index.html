@@ -7,31 +7,63 @@
     <link rel="stylesheet" href="style.css">
     <title>Movie Search</title>
 </head>
-<body>
-    <header>
-        <nav class="navbar">
-            <ul class="nav-links">
-                <a href="#">Home</a>
-                <a href="Find your Movie">Find your Movie</a>
-                <a href="Contact">Contact</a>
-            </ul>
+
+<section id="landing">
+        <nav>
+            <div class="nav__container">
+        
+                <a href="#" class="nav__link">Home</a>
+                <a href="#" class="nav__link">About</a>
+                <a href="#" class="nav__link nav__link--primary">Contact</a>
+            
+            </div>
         </nav>
+<body id="movie__body">
+    <header>
         <h1>Movie Search</h1>
         <h2>Thousands of Movies to Watch</h2>
-        <div class="center-container">
-            <input type="text" id="searchInput" placeholder="Search for a movie...">
-            <button id="searchBtn">Search</button>
-        </div>
-     
-        
+        <title>Movie Search</title>
+</head>
+<body>
+    <div class="center-container">
+        <h1>Search Movies</h1>
+        <input type="text" id="searchInput" placeholder="Search for a movie...">
+        <select id="filterSelect">
+            <option value="all">All</option>
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option>
+            <option value="alphabetical">Alphabetical A-Z</option>
+            <option value="reverseAlphabetical">Alphabetical Z-A</option>
+        </select>
+        <button id="searchBtn">Search</button>
+        <div id="results"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
     </header>
-    <main id="results">
+    <main>
         <div id="loading" style="display:none;">
             Loading...
         </div>
         <div id="results"></div>
         
     </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <footer>
         <p>&copy; 2026 Movie Search</p>
     </footer>

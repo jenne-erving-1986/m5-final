@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 h1 {
     color: purple;
     font-size: 36px;
@@ -21,9 +24,17 @@ body {
     background-size: 1500px 1500px; /* This makes sure the image covers the entire background */
     background-position: center; /* This centers the image */
     background-repeat: no-repeat; /* This prevents the image from repeating */
-    
+    font-family: 'Roboto', sans-serif; /* Fallback to sans-serif if Roboto isn't available */
     
 }
+
+
+
+input, select, button {
+    margin: 10px;
+    padding: 10px;
+}
+
 
 .center-container {
     display: flex;
@@ -36,12 +47,32 @@ body {
     border-radius: 50px;
 }
 
-.nav-links {
-    color: white;
+.nav__link {
+    color: purple;
     display: flex;
-    align-items: center;
+    align-items: right;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0 50px;
+    font-size: 18px;
+    font-weight: 600;
+    
+}
+
+.nav__links {
+    color: purple;
+    display: flex;
+    align-items: right;
+    justify-content: space-between;
+    flex-direction: row;
     padding: 0 50px;
     font-size: 18px;
     font-weight: 600;
 }
 
+.nav__container {
+    display: flex;
+    flex-direction: row;
+    align-items: right;
+    justify-content: space-between;
+}
