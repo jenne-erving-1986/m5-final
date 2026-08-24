@@ -28,6 +28,17 @@ body {
     
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+.click:hover {
+    transform: scale(1.1);
+}
+
+.click:active {
+    transform: scale(0.8);
+}
 
 
 input, select, button {
@@ -45,6 +56,14 @@ input, select, button {
 #searchBtn {
     color: purple;
     border-radius: 50px;
+}
+
+
+/*NAVIGATION BAR*/
+
+#personal-logo {
+    width: 80px;
+    height: 80px;
 }
 
 .nav__link {
@@ -70,7 +89,7 @@ input, select, button {
     font-weight: 600;
 }
 
-.nav__container {
+.landing-page {
     display: flex;
     flex-direction: row;
     align-items: right;

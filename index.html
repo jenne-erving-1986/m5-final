@@ -8,17 +8,31 @@
     <title>Movie Search</title>
 </head>
 
-<section id="landing">
-        <nav>
-            <div class="nav__container">
+
+<body>
+    <section id="landing-page">
+    <nav>
         
-                <a href="#" class="nav__link">Home</a>
-                <a href="#" class="nav__link">About</a>
-                <a href="#" class="nav__link nav__link--primary">Contact</a>
-            
-            </div>
-        </nav>
-<body id="movie__body">
+         <ul class="nav__link--list">
+                <li class="nav__link" onclick="toggleModal()">
+                    <a href="#" class="
+                    nav__link--anchor 
+                    ">Home</a>
+                </li>
+                <li class="nav__link">
+                    <a href="#projects" class="
+                    nav__link--anchor 
+                    ">Movies</a>
+                </li>
+                <li class="nav__link" onclick="toggleModal()">
+                    <a href="#" class="
+                    nav__link--anchor 
+                    ">Contact</a>
+                </li>
+            </li>
+        </ul>
+    </nav>
+    </section>
     <header>
         <h1>Movie Search</h1>
         <h2>Thousands of Movies to Watch</h2>
@@ -38,15 +52,15 @@
         <button id="searchBtn">Search</button>
         <div id="results"></div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
     </header>
     <main>
-        <div id="loading" style="display:none;">
-            Loading...
-        </div>
+        <div id="loading" style="display: none;">Loading...</div>
         <div id="results"></div>
+
+        
+
         
     </main>
 
@@ -64,7 +78,10 @@
 
 
 
-    <footer>
+    <footer class="footer">
         <p>&copy; 2026 Movie Search</p>
+        <figure>
+            <img id="personal-logo" src="./assets/jennes-logo2.PNG" alt="my personal logo">
+        </figure>
     </footer>
 </body> 

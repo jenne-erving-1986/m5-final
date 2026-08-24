@@ -43,49 +43,25 @@ function displayResults(movies) {
     });
 }
 
-const searchBtn = document.getElementById('searchBtn');
-const searchInput = document.getElementById('searchInput');
-const filterSelect = document.getElementById('filterSelect');
-const resultsDiv = document.getElementById('results');
 
-// Sample data for demonstration
-// let movies = [
-//     { title: "Inception", year: 2010 },
-//     { title: "The Matrix", year: 1999 },
-//     { title: "Interstellar", year: 2014 },
-//     { title: "The Godfather", year: 1972 },
-//     { title: "Parasite", year: 2019 }
-// ];
-
-searchBtn.addEventListener('click', function() {
-    const searchTerm = searchInput.value.toLowerCase();
-    const filterValue = filterSelect.value;
-    
-    let filteredResults = movies.filter(movie => 
-        movie.title.toLowerCase().includes(searchTerm) || filterValue === 'all'
-    );
-
-    if (filterValue === 'newest') {
-        filteredResults.sort((a, b) => b.year - a.year);
-    } else if (filterValue === 'oldest') {
-        filteredResults.sort((a, b) => a.year - b.year);
-    } else if (filterValue === 'alphabetical') {
-        filteredResults.sort((a, b) => a.title.localeCompare(b.title));
-    } else if (filterValue === 'reverseAlphabetical') {
-        filteredResults.sort((a, b) => b.title.localeCompare(a.title));
-    }
-
-    displayResults(filteredResults);
+document.getElementById('sortOptions').addEventListener('change', function() {
+    const selectedOption = this.value;
+    sortResults(selectedOption);
 });
 
-function displayResults(movies) {
-    resultsDiv.innerHTML = ''; // Clear previous results
-    movies.forEach(movie => {
-        const movieDiv = document.createElement('div');
-        movieDiv.textContent = `${movie.title} (${movie.year})`;
-        resultsDiv.appendChild(movieDiv);
-    });
+function sortResults(option) {
+    let sortedResults;
+    if (option === 'az') {
+        // Assuming results is your array of movie objects
+        sortedResults = results.sort((a, b) => a.Title.localeCompare(b.Title));
+    } else if (option === 'za') {
+        sortedResults = results.sort((a, b) => b.Title.localeCompare(a.Title));
+    } else if (option === 'newest') {
+        sortedResults = results.sort((a, b) => new Date(b.Year) - new Date(a.Year));
+    } else if (option === 'oldest') {
+        sortedResults = results.sort((a, b) => new Date(a.Year) - new Date(b.Year));
+    }
+    displayResults(sortedResults); // Call your existing function to display the results
 }
-
 
 
