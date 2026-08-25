@@ -19,25 +19,19 @@ h2 {
     justify-content: center; 
 }
 
+
 body {
-    background-image: url('https://as2.ftcdn.net/v2/jpg/06/23/24/03/1000_F_623240349_aCmGPKwic0PIumohlr0jgYPzAozuJdE3.jpg'); /* Replace with your image URL */
-    background-size: 1500px 1500px; /* This makes sure the image covers the entire background */
-    background-position: center; /* This centers the image */
-    background-repeat: no-repeat; /* This prevents the image from repeating */
-    font-family: 'Roboto', sans-serif; /* Fallback to sans-serif if Roboto isn't available */
-    
+    background-image: url('https://as2.ftcdn.net/v2/jpg/06/23/24/03/1000_F_623240349_aCmGPKwic0PIumohlr0jgYPzAozuJdE3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
-}
-
-.click:hover {
-    transform: scale(1.1);
-}
-
-.click:active {
-    transform: scale(0.8);
 }
 
 
@@ -118,9 +112,24 @@ input, select, button {
     background-color: #f9f9f9;
     border: 1px solid #ccc;
     padding: 10px;
-    position: absolute; /* Position it relative to the page */
+    position: right; /* Position it relative to the page */
     z-index: 1000; /* Make sure it appears on top */
+    border-radius: 50px;
 }
+
+
+.email__contact {
+
+}
+
+#email {
+    border-radius: 50px;
+}
+
+.send__btn {
+    border-radius: 50px;
+}
+
 
 
 
@@ -129,15 +138,57 @@ input, select, button {
 #personal-logo {
     width: 80px;
     height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer__para {
     color: white;
+    display: flex;
+    justify-content: center;
 }
+
+.footer__logo--popper {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__anchor {
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+
+}
+
+
+.footer__row {
+
+}
+
+
+.container {
+    margin-top: 60vh;
+}
+
+
+.footer {
+
+
+}
+
+
+
+
 
 
 /*media responsiveness */
 /*768*/
+
+
+
 @media (max-width: 768px) {
 
 }

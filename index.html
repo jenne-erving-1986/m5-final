@@ -13,7 +13,7 @@
     <section id="landing-page">
     <nav>
         <ul class="nav__link--list">
-                <li class="nav__link" onclick="toggleModal()">
+                <li class="nav__link">
                     <a href="#" class="
                     nav__link--anchor 
                     ">Home</a>
@@ -23,13 +23,22 @@
                     nav__link--anchor 
                     ">Movies</a>
                 </li>
-                <li class="nav__link" onclick="toggleModal()">
-                    <a href="#" class="
-                    nav__link--anchor 
-                    ">Contact</a>
+                <li class="nav__link">
+                    <a href="#" id="contactLink" class="nav__link--anchor">
+                    Contact
+                    </a>
                 </li>
                 <div id="emailMenu" style="display: none;">
-                    <p>Contact me at: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+                   <form>
+                    <label for="email">Your Email:</label>
+                    <input 
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                    <button type="submit" class="send__btn">Send</button>
+                   </form>
                 </div>
                 
             </li>
@@ -55,17 +64,28 @@
         <div id="results"></div>
     </div>
     </header>
-</body>
-</html>
+
     
     <main>
         <div id="loading" style="display: none;">Loading...</div>
         <div id="results__loading"></div>  
     </main>
     <footer class="footer">
-        <p class="footer__para">&copy; 2026 Movie Search</p>
-        <figure>
-            <img id="personal-logo" src="./assets/jennes-logo2.PNG" alt="my personal logo">
-        </figure>
+        <div class="container">
+            <div class="row footer__row">
+                <a href="#" class="footer__anchor">
+                    <figure class="footer__logo">
+                    <img id="personal-logo" src="./assets/jennes-logo2.PNG" alt="my personal logo">
+                    </figure>
+                        <span class="footer__logo--popper">
+                            Top
+                            <i class="fas fa-arrow-up"></i>
+                        </span>
+                </a>
+            </div>
+        </div>
+        <p class="footer__para">&copy; 2026 Movie Search by Jennifer Erving</p>
+        
     </footer>
 </body> 
+</html>
