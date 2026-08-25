@@ -74,8 +74,7 @@ input, select, button {
     flex-direction: row;
     padding: 0 50px;
     font-size: 18px;
-    font-weight: 600;
-    
+    font-weight: 600;  
 }
 
 .nav__links {
@@ -89,9 +88,31 @@ input, select, button {
     font-weight: 600;
 }
 
+.nav__link--anchor {
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    flex-direction: row;
+
+}
+
+.nav__link--list {
+    color: purple;
+    display: flex;
+    align-items: right;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0 50px;
+    font-size: 18px;
+    font-weight: 600;  
+}
+
 .landing-page {
     display: flex;
     flex-direction: row;
     align-items: right;
     justify-content: space-between;
 }
+
+
+

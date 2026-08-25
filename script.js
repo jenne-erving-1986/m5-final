@@ -16,7 +16,8 @@ document.getElementById('searchBtn').addEventListener('click', function() {
         .then(data => {
             document.getElementById('loading').style.display = 'none'; // Hide loading state
             if (data.Response === "True") {
-                displayResults(data.Search);
+                results = data.Search;
+                displayResults(results);
             } else {
                 document.getElementById('results').innerHTML = '<p>No results found</p>';
             }
@@ -44,24 +45,30 @@ function displayResults(movies) {
 }
 
 
-document.getElementById('sortOptions').addEventListener('change', function() {
+
+let results = []
+document.getElementById('filterSelect').addEventListener('change', function() {
     const selectedOption = this.value;
     sortResults(selectedOption);
 });
 
 function sortResults(option) {
     let sortedResults;
-    if (option === 'az') {
+    
+    if (option === 'all') {
+        sortedResults = results;
+    } else if (option === 'a-z') {
         // Assuming results is your array of movie objects
         sortedResults = results.sort((a, b) => a.Title.localeCompare(b.Title));
-    } else if (option === 'za') {
+    } else if (option === 'z-a') {
         sortedResults = results.sort((a, b) => b.Title.localeCompare(a.Title));
     } else if (option === 'newest') {
-        sortedResults = results.sort((a, b) => new Date(b.Year) - new Date(a.Year));
+        sortedResults = results.sort((a, b) => parseInt(b.Year) - parseInt(a.Year));
     } else if (option === 'oldest') {
-        sortedResults = results.sort((a, b) => new Date(a.Year) - new Date(b.Year));
+        sortedResults = results.sort((a, b) => parseInt(a.Year) - parseInt(b.Year));
     }
     displayResults(sortedResults); // Call your existing function to display the results
 }
+
 
 

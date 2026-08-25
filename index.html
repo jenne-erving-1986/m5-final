@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Movie Search</title>
 </head>
-
 
 <body>
     <section id="landing-page">
     <nav>
-        
-         <ul class="nav__link--list">
+        <ul class="nav__link--list">
                 <li class="nav__link" onclick="toggleModal()">
                     <a href="#" class="
                     nav__link--anchor 
@@ -33,12 +32,12 @@
         </ul>
     </nav>
     </section>
+   
     <header>
         <h1>Movie Search</h1>
         <h2>Thousands of Movies to Watch</h2>
         <title>Movie Search</title>
 </head>
-<body>
     <div class="center-container">
         <h1>Search Movies</h1>
         <input type="text" id="searchInput" placeholder="Search for a movie...">
@@ -46,8 +45,8 @@
             <option value="all">All</option>
             <option value="newest">Newest</option>
             <option value="oldest">Oldest</option>
-            <option value="alphabetical">Alphabetical A-Z</option>
-            <option value="reverseAlphabetical">Alphabetical Z-A</option>
+            <option value="alphabetical">A-Z</option>
+            <option value="reverseAlphabetical">Z-A</option>
         </select>
         <button id="searchBtn">Search</button>
         <div id="results"></div>
@@ -57,27 +56,8 @@
     </header>
     <main>
         <div id="loading" style="display: none;">Loading...</div>
-        <div id="results"></div>
-
-        
-
-        
+        <div id="results__loading"></div>  
     </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <footer class="footer">
         <p>&copy; 2026 Movie Search</p>
         <figure>
