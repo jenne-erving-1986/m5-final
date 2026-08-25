@@ -57,10 +57,10 @@ function sortResults(option) {
     
     if (option === 'all') {
         sortedResults = results;
-    } else if (option === 'a-z') {
+    } else if (option === 'A-Z') {
         // Assuming results is your array of movie objects
         sortedResults = results.sort((a, b) => a.Title.localeCompare(b.Title));
-    } else if (option === 'z-a') {
+    } else if (option === 'Z-A') {
         sortedResults = results.sort((a, b) => b.Title.localeCompare(a.Title));
     } else if (option === 'newest') {
         sortedResults = results.sort((a, b) => parseInt(b.Year) - parseInt(a.Year));
