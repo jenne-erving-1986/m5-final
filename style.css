@@ -58,16 +58,16 @@ input, select, button {
     border-radius: 50px;
 }
 
+#searchInput {
+    border-radius: 50px;
+}
 
 /*NAVIGATION BAR*/
 
-#personal-logo {
-    width: 80px;
-    height: 80px;
-}
+
 
 .nav__link {
-    color: purple;
+    color: white;
     display: flex;
     align-items: right;
     justify-content: space-between;
@@ -78,7 +78,7 @@ input, select, button {
 }
 
 .nav__links {
-    color: purple;
+    color: white;
     display: flex;
     align-items: right;
     justify-content: space-between;
@@ -93,11 +93,11 @@ input, select, button {
     justify-content: space-between;
     align-items: right;
     flex-direction: row;
-
+    color: white;
 }
 
 .nav__link--list {
-    color: purple;
+    color: white;
     display: flex;
     align-items: right;
     justify-content: space-between;
@@ -114,5 +114,32 @@ input, select, button {
     justify-content: space-between;
 }
 
+#emailMenu {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    position: absolute; /* Position it relative to the page */
+    z-index: 1000; /* Make sure it appears on top */
+}
 
 
+
+/* FOOTER*/ 
+
+#personal-logo {
+    width: 80px;
+    height: 80px;
+}
+
+.footer__para {
+    color: white;
+}
+
+
+/*media responsiveness */
+/*768*/
+@media (max-width: 768px) {
+
+}
+
+/*420*/

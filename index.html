@@ -28,16 +28,19 @@
                     nav__link--anchor 
                     ">Contact</a>
                 </li>
+                <div id="emailMenu" style="display: none;">
+                    <p>Contact me at: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+                </div>
+                
             </li>
         </ul>
     </nav>
     </section>
    
-    <header>
-        <h1>Movie Search</h1>
-        <h2>Thousands of Movies to Watch</h2>
-        <title>Movie Search</title>
-</head>
+    <header class="heading">
+        <h1 class="heading-1">Movie Search</h1>
+        <h2 class="heading-2">Thousands of Movies to Watch</h2>
+        <title class="title">Movie Search</title>
     <div class="center-container">
         <h1>Search Movies</h1>
         <input type="text" id="searchInput" placeholder="Search for a movie...">
@@ -51,15 +54,16 @@
         <button id="searchBtn">Search</button>
         <div id="results"></div>
     </div>
+    </header>
 </body>
 </html>
-    </header>
+    
     <main>
         <div id="loading" style="display: none;">Loading...</div>
         <div id="results__loading"></div>  
     </main>
     <footer class="footer">
-        <p>&copy; 2026 Movie Search</p>
+        <p class="footer__para">&copy; 2026 Movie Search</p>
         <figure>
             <img id="personal-logo" src="./assets/jennes-logo2.PNG" alt="my personal logo">
         </figure>

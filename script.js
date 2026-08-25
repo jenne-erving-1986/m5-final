@@ -57,10 +57,10 @@ function sortResults(option) {
     
     if (option === 'all') {
         sortedResults = results;
-    } else if (option === 'A-Z') {
+    } else if (option === 'a-z') {
         // Assuming results is your array of movie objects
         sortedResults = results.sort((a, b) => a.Title.localeCompare(b.Title));
-    } else if (option === 'Z-A') {
+    } else if (option === 'z-a') {
         sortedResults = results.sort((a, b) => b.Title.localeCompare(a.Title));
     } else if (option === 'newest') {
         sortedResults = results.sort((a, b) => parseInt(b.Year) - parseInt(a.Year));
@@ -72,3 +72,14 @@ function sortResults(option) {
 
 
 
+document.getElementById('contactLink').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default anchor behavior
+    const emailMenu = document.getElementById('emailMenu');
+    
+    // Toggle the display of the email menu
+    if (emailMenu.style.display === "none" || emailMenu.style.display === "") {
+        emailMenu.style.display = "block"; // Show the menu
+    } else {
+        emailMenu.style.display = "none"; // Hide the menu
+    }
+});
