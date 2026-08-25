@@ -56,8 +56,11 @@ input, select, button {
     border-radius: 50px;
 }
 
-/*NAVIGATION BAR*/
 
+
+
+
+/*NAVIGATION BAR*/
 
 
 .nav__link {
@@ -109,7 +112,7 @@ input, select, button {
 }
 
 #emailMenu {
-    background-color: #f9f9f9;
+    background-color: purple;
     border: 1px solid #ccc;
     padding: 10px;
     position: right; /* Position it relative to the page */
