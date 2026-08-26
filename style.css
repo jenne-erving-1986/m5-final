@@ -37,6 +37,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 html {
@@ -272,45 +273,144 @@ nav {
 
 
 
+/* RESPONSIVE LAYOUT */
 
+.results__container {
+    width: min(1100px, calc(100% - 32px));
+    margin: 0 auto;
+}
 
-/*media responsiveness */
-/*768*/
+.movie {
+    width: min(35%, 360px);
+    min-width: 0;
+}
 
+.movie img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
 
+#emailMenu {
+    width: min(1144px, calc(100% - 32px));
+}
+
+.burger-menu {
+    display: none;
+}
 
 @media (max-width: 768px) {
-    .nav__link {
+    h1,
+    h2,
+    h3 {
         text-align: center;
     }
-    .nav-links {
-        display: none; /* Keep hidden until clicked */
+
+    h1,
+    h2 {
+        font-size: clamp(28px, 6vw, 36px);
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    .nav__link--list {
+        padding: 0 20px;
+        gap: 18px;
+    }
+
+    .nav__link {
+        padding: 0;
+    }
+
+    .results__container {
+        width: min(100% - 24px, 600px);
+    }
+
+    .movie {
+        width: calc(50% - 10px);
+    }
+
+    .container {
+        margin-top: 30vh;
     }
 }
 
-/*480*/
-
 @media (max-width: 480px) {
-    .footer {
-        background-color: purple; /* A dark gray color */
-        color: white;           /* White text color for contrast */
-        padding: 0; 
+    nav {
+        align-items: flex-start;
+        padding: 12px;
+    }
+
+    .nav__link--list {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-links {
+        top: 58px;
+        right: 12px;
+        width: min(180px, calc(100% - 24px));
+        padding: 10px 0;
+        z-index: 10;
+    }
+
+    .nav-links a {
+        color: white;
+        padding: 10px 16px;
+        text-decoration: none;
+    }
+
+    #emailMenu {
+        width: calc(100% - 24px);
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #emailMenu form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 8px;
+    }
+
+    #email,
+    #searchInput,
+    #filterSelect,
+    #searchBtn {
+        width: min(100%, 320px);
+        margin: 6px;
+    }
+
+    .results__container {
+        width: calc(100% - 24px);
+    }
+
+    .movie {
         width: 100%;
     }
-    .heading {
-        text-align: center;
+
+    .movie h2 {
+        font-size: 24px;
     }
-    h1 {
-        font-size: 36px;
-        text-align: center; 
-        flex-wrap: wrap;
+
+    #results {
+        gap: 14px;
+        padding: 0 12px;
     }
-    h2 {
-        font-size: 36px;
-        text-align: center;
-        flex-wrap: wrap;
+
+    .container {
+        margin-top: 20vh;
     }
-    .nav__link {
+
+    .footer__para {
+        padding: 0 12px;
         text-align: center;
     }
 }
