@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {
+    box-sizing: border-box;
+}
 
 h1 {
     color: purple;
@@ -28,6 +31,8 @@ body {
     background-attachment: fixed;
     min-height: 100vh;
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -155,6 +160,8 @@ input, select, button {
 .footer__logo--popper {
     display: flex;
     justify-content: center;
+    color: white;
+    text-decoration: none;
 }
 
 .footer__anchor {
@@ -178,8 +185,11 @@ input, select, button {
 
 
 .footer {
-
-
+    margin: 0;
+    background-color: purple; /* A dark gray color */
+    color: white;           /* White text color for contrast */
+    padding: 0; 
+    width: 100%;        /* Add some padding for spacing */
 }
 
 
@@ -232,3 +242,11 @@ input, select, button {
 }
 
 
+@media (max-width: 480px) {
+    .footer {
+        background-color: purple; /* A dark gray color */
+        color: white;           /* White text color for contrast */
+        padding: 0; 
+        width: ;
+    }
+}
