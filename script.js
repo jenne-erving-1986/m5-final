@@ -34,6 +34,8 @@ function displayResults(movies) {
     resultsContainer.innerHTML = ''; // Clear previous results
     movies.forEach(movie => {
         const movieElement = document.createElement('div');
+        movieElement.classList.add('movie');
+
         movieElement.innerHTML = `
             <h2>${movie.Title} (${movie.Year})</h2>
             <img src="${movie.Poster}" alt="${movie.Title} poster">
@@ -82,4 +84,11 @@ document.getElementById('contactLink').addEventListener('click', function(event)
     } else {
         emailMenu.style.display = "none"; // Hide the menu
     }
+});
+
+
+document.getElementById('burgerMenu').addEventListener('click', function() {
+    const navLinks = document.getElementById('navLinks');
+    // Toggle the 'active' class to show/hide the menu
+    navLinks.classList.toggle('active');
 });

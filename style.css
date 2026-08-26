@@ -22,6 +22,10 @@ h2 {
     justify-content: center; 
 }
 
+h3 {
+    color: purple;
+    font-size: 36px;
+}
 
 body {
     background-image: url('https://as2.ftcdn.net/v2/jpg/06/23/24/03/1000_F_623240349_aCmGPKwic0PIumohlr0jgYPzAozuJdE3.jpg');
@@ -45,11 +49,45 @@ input, select, button {
     padding: 10px;
 }
 
+/* RESULTS */
 
 .results__container {
+
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    
+}
+#results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.result {
+    flex: 0 0 25%;
+    flex-wrap: wrap;              /* Each item takes up 25% of the container */
+    box-sizing: border-box;      /* Include padding and border in width */
+    padding: 10px;               /* Add some padding */
+    text-align: center; 
+    justify-content: center;
+    flex-direction: row;
+    display: grid;
+              
+}
+
+
+.results {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    display: grid;
 }
 
 #searchBtn {
@@ -62,6 +100,14 @@ input, select, button {
 }
 
 
+.heading {
+   
+    
+}
+
+.movie {
+    width: 35%;
+}
 
 
 
@@ -139,6 +185,35 @@ input, select, button {
     
 }
 
+/* BURGER MENU*/ 
+
+/* Basic styles for the navigation */
+nav {
+    position: relative;
+}
+
+/* Hide the nav links by default */
+.nav-links {
+    display: none; /* Hidden for mobile */
+    flex-direction: column; /* Stack links vertically */
+    background-color: purple; /* Dark background for visibility */
+    position: absolute; /* Positioning for dropdown */
+    width: 100%; /* Full width */
+}
+
+/* Show nav links when burger menu is active */
+.nav-links.active {
+    display: flex; /* Show the links when activated */
+}
+
+/* Style for the burger menu */
+.burger-menu {
+    cursor: pointer; /* Pointer cursor for interaction */
+    font-size: 30px; /* Size of the burger icon */
+    color: purple; /* White color for visibility */
+}
+
+
 
 
 
@@ -207,6 +282,9 @@ input, select, button {
 @media (max-width: 768px) {
     .nav__link {
         text-align: center;
+    }
+    .nav-links {
+        display: none; /* Keep hidden until clicked */
     }
 }
 

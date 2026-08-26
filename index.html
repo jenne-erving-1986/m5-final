@@ -42,6 +42,17 @@
                 </form>
             </div>
     </nav>
+    <nav>
+        <div class="burger-menu" id="burgerMenu">
+            &#9776; <!-- This is the hamburger icon -->
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#movies">Movies</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
     </section>
    
     <header class="heading">
@@ -49,24 +60,26 @@
         <h2 class="h2">Thousands of Movies to Watch</h2>
         <title class="title">Movie Search</title>
     <div class="results__container">
-        <h1>Search Movies</h1>
+        <h3 class="h3">Search Movies</h3>
         <input type="text" id="searchInput" placeholder="Search for a movie...">
         <select id="filterSelect">
-            <option class="results" value="all">All</option>
-            <option class="results" value="newest">Newest</option>
-            <option class="results" value="oldest">Oldest</option>
-            <option class="results" value="a-z">A-Z</option>
-            <option class="results" value="z-a">Z-A</option>
+            <option class="result" value="all">All</option>
+            <option class="result" value="newest">Newest</option>
+            <option class="result" value="oldest">Oldest</option>
+            <option class="result" value="a-z">A-Z</option>
+            <option class="result" value="z-a">Z-A</option>
         </select>
         <button id="searchBtn">Search</button>
+        <div id="results"></div>
     </div>
     </header>
 
     
     <main>
-        <div id="loading" style="display: none;">Loading...</div>
-        <div id="results__loading"></div>  
-    </main>
+        <main>
+            <div id="loading" style="display: none;">Loading...</div>
+            <div id="results"></div>
+        </main>
     <footer class="footer">
         <div class="container">
             <div class="row footer__row">
